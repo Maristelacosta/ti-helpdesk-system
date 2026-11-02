@@ -47,3 +47,32 @@ A solução permite abertura de chamados, acompanhamento de status, atribuição
 - Comentários
 - Relatórios
 - Dashboard
+
+---
+
+## 🏛️ Diagrama de Casos de Uso
+
+```mermaid
+flowchart LR
+
+    Colaborador[Colaborador]
+    Tecnico[Técnico de TI]
+    Admin[Administrador]
+
+    UC1((Abrir Chamado))
+    UC2((Consultar Chamado))
+    UC3((Atualizar Status))
+    UC4((Registrar Solução))
+    UC5((Gerar Relatórios))
+    UC6((Gerenciar Usuários))
+
+    Colaborador --> UC1
+    Colaborador --> UC2
+
+    Tecnico --> UC2
+    Tecnico --> UC3
+    Tecnico --> UC4
+
+    Admin --> UC5
+    Admin --> UC6
+```
