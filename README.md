@@ -146,3 +146,16 @@ class Comentario{
 Usuario "1" --> "*" Chamado
 Chamado "1" --> "*" Comentario
 ```
+---
+
+## 📜 Regras de Negócio
+
+1. Todo chamado deve possuir uma prioridade.
+2. Todo chamado deve possuir um usuário responsável.
+3. Um chamado pode receber vários comentários.
+4. Apenas técnicos podem encerrar chamados.
+5. Administradores possuem acesso total ao sistema.
+6. Todo chamado deve possuir data de abertura.
+7. Chamados encerrados não podem ser editados.
+
+---
