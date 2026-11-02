@@ -76,3 +76,35 @@ flowchart LR
     Admin --> UC5
     Admin --> UC6
 ```
+---
+
+## 🗄️ Modelo Entidade-Relacionamento (ERD)
+
+```mermaid
+erDiagram
+
+    USUARIO {
+        int id_usuario PK
+        string nome
+        string email
+        string perfil
+    }
+
+    CHAMADO {
+        int id_chamado PK
+        string titulo
+        string descricao
+        string prioridade
+        string status
+        date data_abertura
+    }
+
+    COMENTARIO {
+        int id_comentario PK
+        string descricao
+        date data_comentario
+    }
+
+    USUARIO ||--o{ CHAMADO : abre
+    CHAMADO ||--o{ COMENTARIO : possui
+```
