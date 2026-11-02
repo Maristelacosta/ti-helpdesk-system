@@ -108,3 +108,41 @@ erDiagram
     USUARIO ||--o{ CHAMADO : abre
     CHAMADO ||--o{ COMENTARIO : possui
 ```
+---
+
+## 🏗️ Diagrama de Classes UML
+
+```mermaid
+classDiagram
+
+class Usuario{
++id
++nome
++email
++perfil
+
++abrirChamado()
++consultarChamado()
+}
+
+class Chamado{
++id
++titulo
++descricao
++prioridade
++status
+
++abrir()
++encerrar()
+}
+
+class Comentario{
++id
++descricao
+
++adicionar()
+}
+
+Usuario "1" --> "*" Chamado
+Chamado "1" --> "*" Comentario
+```
